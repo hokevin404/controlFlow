@@ -60,3 +60,23 @@ console.log(`\nNew Radius: ${newRadius} meters`);
 // The scientists decided not to listen to your recommendations, and have instead started with 100 plants in the original 5-meter-radius garden.
 // Use try and catch to wrap your work in an error-handling block. If the amount of space required to hold the originally provided number of plants exceeds the amount of space available, throw a new error and log an appropriate message.
 
+let numOfWeeks = 10;
+
+let plantAreaOfWeek = 0.8*((2**(10-1)*100));
+console.log(`\nPlant Area Of Week: ${plantAreaOfWeek}`);
+let capacityOfWeek = plantAreaOfWeek / area;
+console.log(`Capacity Of Week: ${capacityOfWeek}`)
+
+
+try 
+{
+    if(capacityOfWeek >= 0.8 && capacityOfWeek <= 1)
+        console.log(`Pruned`);
+    else if(capacityOfWeek >= .5 && capacityOfWeek < .8)
+        console.log(`Monitored`);
+    else if(capacityOfWeek < .5)
+        console.log(`Planted`);
+} catch(err) {
+    console.log(err);
+    console.log(`Unsufficient space required for plants.`);
+}
